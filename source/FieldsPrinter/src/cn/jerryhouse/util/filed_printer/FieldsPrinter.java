@@ -1,4 +1,4 @@
-package cn.jerryhouse.util.reflects.filedList;
+package cn.jerryhouse.util.filed_printer;
 
 /**
  * 以xml格式打印对象内部的所有属性值.
@@ -9,11 +9,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import cn.jerryhouse.util.reflects.filedList.test.Stu;
+import cn.jerryhouse.util.filed_printer.test.Stu;
 
-public class FieldsLister {
+public class FieldsPrinter {
 	private Map<String,String> fieldsToFilter = new HashMap<String,String>();
-	public FieldsLister()
+	public FieldsPrinter()
 	{
 //		fieldsToFilter.put("teacher","");	
 	}
@@ -118,7 +118,7 @@ public class FieldsLister {
 
 	public static void main(String[] args) {
 		Stu stu = new Stu();
-		FieldsLister fieldsLister = new FieldsLister();
+		FieldsPrinter fieldsLister = new FieldsPrinter();
 		System.out.println(fieldsLister.toString(stu));
 	}
 }

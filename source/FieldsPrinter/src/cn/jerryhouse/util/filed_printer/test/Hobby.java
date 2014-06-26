@@ -1,4 +1,4 @@
-package cn.jerryhouse.util.reflects.filedList.test;
+package cn.jerryhouse.util.filed_printer.test;
 
 public class Hobby {
 	String name;
