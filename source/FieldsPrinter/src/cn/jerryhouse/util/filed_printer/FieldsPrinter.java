@@ -9,20 +9,22 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import cn.jerryhouse.util.filed_printer.test.Stu;
-
-public class FieldsPrinter {
-	private Map<String,String> fieldsToFilter = new HashMap<String,String>();
+public abstract class FieldsPrinter {
+	protected Map<String,String> fieldsToFilter = new HashMap<String,String>();
 	public FieldsPrinter()
 	{
-//		fieldsToFilter.put("teacher","");	
 	}
 	public String toString(Object obj) {
-    	String str = "<root>"+listFields(obj)+"</root>";
-    	return XMLFormat.beautifyXML(str);
+    	String str = formatOuput(listFields(obj));
+    	return str;
+	}
+	protected String formatOuput(String str)
+	{
+		String formattedStr = "<root>"+str+"</root>";
+    	return XMLFormat.beautifyXML(formattedStr);
 	}
 
-	private String wrapFieldValuePair(String fieldName, Object value) {
+	protected String wrapFieldValuePair(String fieldName, Object value) {
 		return "<" + fieldName + ">" + value + "</" + fieldName + ">";
 	}
 
@@ -114,11 +116,5 @@ public class FieldsPrinter {
 
 	public boolean isJavaClass(Object obj) {
 		return obj.getClass() != null && obj.getClass().getClassLoader() == null;
-	}
-
-	public static void main(String[] args) {
-		Stu stu = new Stu();
-		FieldsPrinter fieldsLister = new FieldsPrinter();
-		System.out.println(fieldsLister.toString(stu));
 	}
 }
