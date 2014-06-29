@@ -2,9 +2,12 @@ package cn.jerryhouse.util.filed_printer.test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.Vector;
 
 public class Stu {
 	int id = 100;
@@ -15,9 +18,11 @@ public class Stu {
 	String[] friends;
 	List nickNameList;
 	List hobbyList;
+	Set testSet;
+	Vector testVec;
 	public Stu()
 	{
-		teacher = new Teacher();
+//		teacher = new Teacher();
 		bookMap = new HashMap();
 		bookMap.put("book1", "harry");
 		bookMap.put("book2", "young");
@@ -30,5 +35,11 @@ public class Stu {
 		hobbyList = new ArrayList();
 		hobbyList.add(new Hobby("football"));
 		hobbyList.add(new Hobby("baseball"));
+		testSet = new HashSet();
+		testSet.add("1");
+		testSet.add("2");
+		testVec = new Vector();
+		testVec.add("1");
+		testVec.add("2");
 	}
 }

@@ -1,4 +1,4 @@
-package cn.jerryhouse.util.filed_printer.objs;
+package cn.jerryhouse.util.filed_printer.viewer;
 
 public class CollectionItem {
 	private String itemName;

@@ -3,18 +3,11 @@ package cn.jerryhouse.util.filed_printer;
 /**
  * 以xml格式打印对象内部的所有属性值.
  */
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import cn.jerryhouse.util.filed_printer.test.Stu;
 
 public class XMLFieldsPrinter extends FieldsPrinter{
 	public XMLFieldsPrinter()
-	{
-//		fieldsToFilter.put("teacher","");	
+	{	
 	}
 	protected String formatOuput(String str)
 	{
